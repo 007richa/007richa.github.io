@@ -1,0 +1,67 @@
+/* 
+A color wheel is a circle where similar colors,
+or hues,
+are near each other,
+and different ones are further apart. For example,
+pure red is between the hues rose and orange. Two colors that are opposite from each other on the color wheel are called complementary colors. If two complementary colors are combined,
+they produce gray. But when they are placed side-by-side,
+these colors produce strong visual contrast and appear brighter.
+
+This contrast can be distracting if it's overused on a website, and can make text hard to read if it' s placed on a complementary-colored background.
+
+It's better practice to choose one color as the dominant color, and use its complementary color as an accent to bring attention to certain content on the page.
+*/
+
+
+
+
+h1{
+  text-align: center;
+;
+}
+.marker{
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
+/* box-shadow: offsetX offsetY blurRadius spreadRadius color; */
+.red{
+  background: linear-gradient(
+    rgb(122, 74, 14) ,
+    rgb(245, 62, 113) ,
+    rgb(162, 27, 27) );
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+.green{
+  background: linear-gradient(#55680D,
+    #71F53E,
+    #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC
+}
+.blue{
+  background: linear-gradient(hsl(186, 76%, 16%),
+    hsl(223, 90%, 60%),
+    hsl(240, 56%, 42%));
+box-shadow: 0 0 20px 0  hsla(223, 59%, 31%, 0.8)
+}
+.container{
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.cap{
+  height: 25px;
+  width: 60px;
+  
+}
+
+.sleeve{
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+.sleeve, .cap{
+  display: inline-block;
+ 
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Another important meta element for accessibility and SEO is the description definition. The value of the content
+  attribute is used by search engines to provide a description of your page. -->
+
+  <meta name="description" content="HTML/CSS quiz">
+
+  <!-- Lastly in the head, the title element is useful for screen readers to understand the content of a page. Furthermore, it is an important part of SEO. -->
+  <title>html/css quiz to learn accessibility</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- The header element will be used to introduce the page, as well as provide a navigation menu.
+  
+  The main element will contain the core content of your page. -->
+
+  <header>
+    <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" id="logo" alt="">
+    <h1>HTML/CSS Quiz</h1>
+    <nav>
+        <ul>
+          <li><a href="#student-info" accesskey="i">INFO</a> </li>
+          <li><a href="#html-questions" accesskey="h">HTML</a> </li>
+          <li><a href="#css-questions">CSS</a> </li>
+        </ul>
+    </nav>
+    
+  </header>
+  <main>
+
+
+    <!-- The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute).
+    
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). -->
+    
+
+<form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+  <section role="region" aria-labelledby="student-info"><h2 id="student-info">student-info</h2>
+  <div class="info">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="">
+  </div>
+  <div class="info">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
+  </div>
+  <div class="info">
+    <label for="dob">D.O.B.: <span class="sr-only">(Date of Birth)</span></label>
+    <input type="date" name="D.O.B." id="dob">
+  </div>
+  </section>
+  
+  
+  <section role="region" aria-labelledby="html-questions"><h2 id="html-questions">HTML</h2>
+  <div class="question-block">
+    <p>1</p>
+    <fieldset class="question" name="html-question-one">
+      <legend>The legend element represents a caption for the content of its parent fieldset element</legend>
+    <ul class="answers-list">
+      <li>
+        <label for="q1-a1">
+          <input type="radio" id="q1-a1" value="True" name="Q1"/>True
+        </label>
+      </li>
+      <li>
+        <label for="q1-a2">
+          <input type="radio" id="q1-a2" value="False" name="Q1" />False
+        </label>
+      </li>
+    </ul>
+    </fieldset>
+    </div>
+    <div class="question-block">
+      <p>2</p>
+      <fieldset class="question" name="html-question-two">
+        <legend>
+          A label element nesting an input element is required to have a
+          for attribute with the same value as the input's id
+        </legend>
+        <ul class="answers-list">
+          <li>
+            <label for="q2-a1">
+              <input type="radio" id="q2-a1" value="True" name="Q2" />True
+            </label>
+          </li>
+          <li>
+            <label for="q2-a2">
+              <input type="radio" id="q2-a2" value="False" name="Q2"/>Fnamelse
+            </label>
+          </li>
+        </ul>
+    </fieldset>
+  </div>
+  </section>
+  
+  
+  <section role="region" aria-labelledby="css-questions">
+    <h2 id="css-questions">CSS</h2>
+    <div class="formrow">
+      <div class="question-block"><label for="q1">Are you an frontend developer?</label></div>
+      <div class="answer">
+        <select name="a1" id="q1" required>
+          <option value="">Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="question-block">
+        <label for="q2">Do you have any questions:</label>
+      </div>
+      <div class="answer" >
+        <textarea id="q2" name="a2" placeholder="what is flexbox.." cols="30" rows="10"></textarea>
+      </div>
+    </div>
+  </section>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+ <footer>
+  <address>
+    <a href="https://freecodecamp.org">freeCodeCamp<br /></a>
+    San Francisco<br />
+    California<br />
+    USA
+  </address>
+</footer>
+</body>
+</html>
